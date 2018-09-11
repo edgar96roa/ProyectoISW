@@ -1,22 +1,17 @@
 %=========================================================
 \chapter{Introducción}
-
-
-\cdtInstrucciones{
-	Presentar el documento, indicando su contenido, a quien va dirigido, quien lo realizó, por que razón, dónde y cuando. \\
-}
-	Este documento contiene la Especificacion del ptoyecto ``{\em Nombre del proyecto}'' correspondiente al trabajo realizado en el semestre 2016-2017-2 para la materia de Análisis y diseño orientado a objetos en el grupo 2CV9 por el equipo {\em Nombre del equipo}.
-
 %---------------------------------------------------------
 \section{Presentación}
+Este proyecto surge de la necesidad que presenta una empresa dedicada a la instalación y renta de anuncios espectaculares, ha crecido en los últimos años y requieren de un mejor control en sus actividades como son el número de espectaculares que se encuentran en funcionamiento, los que necesitan mantenimiento, o los cuales ya superaron su fecha de vencimiento de contrato.
+Es por ello que nuestro equipo ha pensado en un software  que pueda satisfacer algunas necesidades que la empresa presenta y por lo tanto ayudar al personal de ventas a ofrecer el mejor servicio a los clientes.
 
 
-\cdtInstrucciones{
-	Indique el propósito del documento y las distintas formas en que puede ser utilizado.\\
-}
-	Este documento contiene la especificación de los requerimientos del usuario y del sistema del sistema a desarrollar. Tiene como objetivo establecer la naturaleza y funciones del sistema para su evaluación al final del semestre. Este documento debe ser aprobado por los principales responsables del proyecto.
-	
-	Este documento es el C2-EP1 del proyecto ``{\em Nombre del proyecto}''.
+%\cdtInstrucciones{
+%	Indique el propósito del documento y las distintas formas en que puede ser utilizado.\\
+%}
+%	Este documento contiene la especificación de los requerimientos del usuario y del sistema del sistema a %desarrollar. Tiene como objetivo establecer la naturaleza y funciones del sistema para su evaluación al final %del semestre. Este documento debe ser aprobado por los principales responsables del proyecto.
+%	
+%	Este documento es el C2-EP1 del proyecto ``{\em Nombre del proyecto}''.
 	
 %---------------------------------------------------------
 \section{Organización del contenido}
@@ -28,21 +23,26 @@
 %---------------------------------------------------------
 \section{Notación, símbolos y convenciones utilizadas}
 
-	Los requerimientos funcionales utilizan una clave RFX, donde:
+Los requerimientos del usuario utilizan una clave RUN-X, donde:
 	
 \begin{description}
-	\item[X] Es un número consecutivo: 1, 2, 3, ...
-	\item[RF] Es la clave para todos los {\bf R}equerimientos {\bf F}uncionales.
+    \item[RU] Es la clave para los requerimientos de usuario.
+	\item[X] Toma los valores \textbf{C}, \textbf{PM}, \textbf{V}, \textbf{CH} para los actores
+	\begin{description}
+	    \item[C] Cliente
+	    \item[PIM] Personal de instalación y mantenimiento
+	    \item[V] Vendedores
+	    \item[CH] Capital humano
+	    \item[A] Arrendador
+	\end{description}
+	\item[N] Es un número consecutivo: 1, 2, 3, ...
 \end{description}
-
-	Los requerimientos del usuario utilizan una clave RUX, donde:
-	
+Los requerimientos funcionales utilizan una clave \textbf{RFX}, donde:
 \begin{description}
-	\item[X] Es un número consecutivo: 1, 2, 3, ...
-	\item[RU] Es la clave para todos los {\bf R}equerimientos del {\bf U}suario.
+    \item[X] Es un número consecutivo: 1, 2, 3, ...
+    \item[RF] Es la clave para todos los Requerimientos Funcionales.
 \end{description}
-
-	Además, para los requerimeitnos funcionales se usan las abreviaciones que se muestran en la tabla~\ref{tbl:leyendaRF}.
+	Además, para los requerimientos funcionales se usan las abreviaciones que se muestran en la tabla~\ref{tbl:leyendaRF}.
 \begin{table}[hbtp!]
 	\begin{center}
     \begin{tabular}{|r l|}
