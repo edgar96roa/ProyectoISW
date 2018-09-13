@@ -1,5 +1,6 @@
 \documentclass[10pt]{book}
 
+\usepackage{enumitem}
 \usepackage{cdtBook}
 \usepackage{usecases}
 \usepackage{txfonts}
@@ -8,8 +9,17 @@
 \author{X-Force}
 \organization{Escuela Superior de Cómputo, IPN}
 \showInstrucciones
-\date{\color{red}Borrador del 11 de Septiembre del 2018\\(para revisión)}
+\date{\color{red}Borrador del 13 de Septiembre del 2018\\(para revisión)}
 %\date{\color{green}Version 1.0}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -23,7 +33,7 @@
 \listoffigures
 \listoftables
 
-\include{projectCharter}
+%\include{projectCharter}
 
 \mainmatter
 \LRCornerWallPaper{1}{images/plecaAyD}
@@ -34,15 +44,18 @@
 \include{1introduccion}
 
 %=========================================================
-\include{2ModeloDelAlcance}
+\include{2Glosario}
 
 %=========================================================
-\include{3ModeloDelNegocio}
+\include{3Propuesta}
 
 %=========================================================
-\include{4ModeloDinamico}
+%\include{3ModeloDelNegocio}
 
 %=========================================================
-\include{5ModeloDeInteraccion}
+%\include{4ModeloDinamico}
+
+%=========================================================
+%\include{5ModeloDeInteraccion}
 
 \end{document}

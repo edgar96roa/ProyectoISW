@@ -1,0 +1,279 @@
+%=========================================================
+\chapter{Modelo del Alcance}
+\label{cap:reqUsr}
+
+	En este capítulo se modela el alcance del sistema. Se presentan inicialmente los Actores involucrados y sus requerimientos, especificando cuales se alcanzaron en la primera iteración y cuales serán trabajados en la segunda iteración. Después se presentan los requerimientos funcionales de esta iteración y al final se presenta el modelo Físico y Lógico del sistema.
+
+
+%---------------------------------------------------------
+\section{Análisis del problema}
+
+\subsection{Problema general}
+La empresa Espectaculares S.A de C.V ha estado creciendo los últimos años y actualmente cuenta con el 95\% de los espectaculares en la Ciudad de México, los clientes sólo pueden contactar a la empresa de lunes a viernes, lo cuál se convierte en una pérdida de capital para la empresa al no existir una comunicación durante esos lapsos de tiempo, aunado a esto, al tener tantos cambios en tan poco tiempo no han implementado una manera eficiente para un mejor control en su información.%RC
+
+\subsection{Problemas específicos}
+El manejo actual de la información se maneja por separado es por ello que:
+\begin{itemize}
+    \item No se cuenta con la información de cuantos espectaculares se tienen.
+    \item No existe un control total de la información de los espectaculares asegurados.
+    \item Se desconoce que anuncios hay que retirar cuando se vence un contrato.
+    \item Se desconoce con cuantos clientes cuenta la empresa.
+    \item Se desconoce si los clientes han cambiado de número, dirección o nombre de la persona responsable de los contratos.
+    \item El personal de infraestructura desconoce las condiciones de los espectaculares
+    \item El personal de instalación y mantenimiento no tiene conocimiento de las condiciones en las cuales se encuentra un espectacular que requiera algún servicio.
+    \item El personal jurídico desconoce cuales son los próximos permisos a renovar.
+    \item El agente de ventas no cuenta con la información de los espectaculares disponibles.
+\end{itemize}
+
+\subsection{Causas}
+Las principales causas se deben a que la empresa:
+\begin{itemize}
+    \item Tiene la información dividida en distintos departamentos.
+    \item Ha crecido bastante en los últimos años.
+    \item Ha tenido un aumento de clientes.
+    \item No tiene una forma de contacto en horas no laborales para sus empleados.
+\end{itemize}
+
+\subsection{Consecuencias}
+Como consecuencias la empresa:
+\begin{itemize}
+    \item No ha podido crecer más de lo que ha crecido.
+    \item Se ha generado una posible pérdida de clientes durante los horarios no laborables en la empresa.
+    \item La comunicación entre personal de ventas y clientes únicamente se realiza durante las horas laborables para los empleados.
+\end{itemize}
+
+
+\subsection{Requerimientos de usuario}
+\begin{table}[htbp!]
+	\begin{requerimientosU}
+		\FRitem{RUC-1}{Control de quejas}{Necesita un apartado donde pueda plasmar y enviar sus quejas.}{1}{\TODO}
+		\FRitem{RUC-2}{Notificaciones de duración de contratos}{Necesita que se le informe la fecha de vencimiento de la renta de su espectacular, así como que se le den avisos cuando ya se vaya acercando esta fecha.}{1}{\TODO}
+		\FRitem{RUC-3}{Control de dudas y sugerencias}{Necesita un apartado donde pueda enviarle sus dudas, opiniones o sugerencias a la empresa.}{1}{\TODO}
+		\FRitem{RUC-4}{Detalle de contrato}{Necesita poder consultar su(s) espectacular(es) contratado(s) y el estado en que se encuentran, así como a fecha límite que para renovar su contrato (en caso de que lo desee) y la fecha de terminación de este.}{1}{\TODO}
+		\FRitem{RUC-5}{Inicio de sesion}{Necesita poder tener una sesión para acceder a los datos del sistema.}{1}{\TODO}
+		\FRitem{RUV-1}{Registro de clientes}{Necesita registrar nuevos clientes.}{1}{\TODO}
+		\FRitem{RUV-2}{Disponibilidad de espectaculares}{Saber cuáles espectaculares están disponibles para incluirlos en un contrato.}{1}{\TODO}
+		\FRitem{RUV-3}{Registro rápido de clientes existentes}{Cargar la información de sus clientes desde un archivo de Excel con un formato definido. (Delimitar el formato) }{1}{\TODO}
+		\FRitem{RUV-4}{Herramienta de cotización}{Necesita una herramienta auxiliar para la cotización de un contrato.}{1}{\TODO}
+		\FRitem{RUV-5}{Clasificación de clientes}{Necesita conocer la clasificación en la cuál se encuentran sus clientes para otorgarles descuentos.}{1}{\TODO}
+		\FRitem{RUV-6}{Control de información}{Necesita poder actualizar los datos personales de los clientes fácilmente.}{1}{\TODO}
+		\FRitem{RUV-7}{Modificar contratos}{Necesita poder consultar,modificar y cancelar contratoscuando le sea necesario }{1}{\TODO}
+		\FRitem{RUPI-1}{Manejo de información de espectaculares}{Necesita poder agregar, actualizar o eliminar la información relacionada a los espectaculares (ubicación, tipo, dimensiones, datos del arrendador).}{1}{\TODO}
+		\FRitem{RUPI-2}{Incidentes en espectaculares}{Realizar la consulta de incidencias relacionadas a los espectaculares.}{1}{\TODO}
+		\FRitem{RUPI-3}{Asignación de reparaciones}{Necesita una forma ágil de asignación de incidencias de espectaculares al personal de instalación y mantenimiento.}{1}{\TODO}
+		%\FRitem{RUPI-4}{}{}{1}{\TODO}
+		\FRitem{RUIM-1}{Instalación de espectaculares}{Saber cuáles serán los espectaculares que requieren ser instalados con su información correspondiente.}{1}{\TODO}
+		\FRitem{RUIM-2}{Desinstalación de espectaculares}{Saber cuáles serán los espectaculares que requieren ser desinstalados con su información correspondiente.}{1}{\TODO}
+		\FRitem{RUIM-3}{Mantenimiento de espectaculares}{Saber cuáles serán los espectaculares que requieren mantenimiento con su información correspondiente.}{1}{\TODO}
+		\FRitem{RUIM-4}{Disponibilidad de espectaculares}{Mostrara la disponibiliad de un espectacular en una zona, el tipo de espectacular, sus dimensiones}{1}{\TODO}
+		\FRitem{RUA-1}{Reporte de incidentes}{Reportar desperfectos de los espectaculares}{1}{\TODO}
+		\FRitem{RUCH-1}{Registro de empleados}{Altas, bajar y cambios de empleados de la empresa}{1}{\TODO}
+		\FRitem{RUPJ-1}{Registro de permisos}{Podrá registrar los oficios en donde recibe permiso por parte del gobierno para utilizar el espacio para fines publicitarios.}{1}{\TODO}
+		\FRitem{RUPJ-2}{Visualización de permisos}{Necesita poder visualizar si los espectaculares cuentan con permiso por parte del gobierno}{1}{\TODO}
+		\FRitem{RUPJ-3}{Historial de permisos}{Necesita consultar el historial de permisos por año y mes.}{1}{\TODO}
+		\FRitem{RUPJ-4}{Noificación de vencimiento de permisos}{Necesita recibir avisos de espectaculares con permisos vencidos o próximos a vencer}{1}{\TODO}
+		\FRitem{RUGV-1}{Cartera de clientes}{Necesita poder consultar el historial de los clientes que ha tenido la empresa}{1}{\TODO}
+		
+		
+	\end{requerimientosU}
+
+    \caption{Requerimientos de Usuario.}
+    {\footnotesize\em Para leer correctamente esta tabla vea la leyenda en la Tabla~\ref{tbl:leyendaRF} en la página~\pageref{tbl:leyendaRF}.}
+    \label{tbl:reqFunc}
+\end{table}
+
+\newpage
+\section{Propuesta}
+Con el fin de resolver los problemas anteriormente mencionados que enfrenta Espectaculares S.A de C.V nuestra empresa X-Force propone la creación de un software que permita mejorar y optimizar su funcionamiento haciendo que las distintas actividades que realizan los empleados día con día como son : la atención a clientes,el control de renta de espectaculares y actividades referentes a su mantenimiento,disponibilidad, instalación  entre otras cosas puedan ser llevadas a cabo mas fácilmente, de forma organizada y eficiente.
+
+
+\subsection{Objetivos generales}
+
+Desarrollar un software para la empresa Espectaculares S.A de C.V que le permita tener un mayor control, organización e información relacionada con los espectaculares y clientes, así como mejorar la comunicación con los clientes y personal de ventas.
+
+\subsection{Objetivos específicos}%%Roa
+
+\begin{itemize}
+    \item Conocer el número de espectaculares con los cuales cuenta la empresa y sus características.
+    \item Saber que espectaculares requieren mantenimiento preventivo o correctivo.
+    \item Saber que espectaculares requieren una solicitud de permisos gubernamentales o cuales requieren una renovación de ellos.
+    \item Conocer cuando las fechas próximas de vencimiento de contratos.
+    \item Contar con un historial de contratos.
+    \item Dar facilidad a los clientes de contactar a la empresa durante horas no laborables.
+    \item Recibir las quejas de los clientes para darles seguimiento.
+    \item Hacer que los clientes puedan conocer la ubicación y características de los espectaculares que han contratado dentro del sistema.
+    \item Hacer que los clientes puedan conocer el impacto de los espectaculares de acuerdo a la zona en que deseen contratarlo.
+\end{itemize}
+
+\subsection{Descripción de la solución}
+Dentro del sistema propuesto el cliente, personales de: ventas, infraestructura, capital humano, instalación y mantenimiento, así como los gerentes de ventas e infraestructura, además de el departamento jurídico y arrendadores tendrán acceso a una plataforma web por medio de la cuál podrán realizar cuando menos una de sus necesidades.\\
+
+Para evitar la posible pérdida de clientes en las horas no laborables el sistema tendrá una manera de captar las solicitudes de los clientes para contactar a un empleado dentro del personal de ventas, asimismo los clientes podrán enviar sus quejas o sugerencias para darles seguimiento.\\
+
+El gerente de ventas recibirá las solicitudes de los clientes y las asignará al personal de ventas.\\
+
+El personal de ventas podrá dar de alta, hacer cambios o eliminar del sistema a los clientes con los cuáles cuenta, además contará con un asistente que le permita realizar una cotizaciones dónde pueda ver en un mapa cuáles son los espectaculares asociados a esa cotización.\\
+
+El gerente de infraestructura podrá dar de alta, hacer cambios o eliminar del sistema a los espectaculares que tenga la empresa, de igual manera recibirá un reporte mensual de incidentes ocurridos.\\
+
+
+\section{Alcance}
+
+\subsection{Requerimientos funcionales}
+
+\begin{enumerate}[leftmargin=2.5cm ,label={\bfseries RF-\arabic*}]
+  
+    % Permisos
+   \item \textbf{ Inicio de sesión:} El sistema debe de contar con un inicio de sesión para el personal de instalación y mantenimiento, vendedores, clientes y arrendadores. Sólo los usuarios autorizados de esta forma podrán acceder a los datos del sistema.
+   
+      \textbf{Ref:} RUC-5
+    
+    \textbf{Prioridad:}MA
+\item \textbf{ Registro de clientes:} Debe ser posible registrar los datos de los clientes (nombre,telefono,RFC, domicilio fiscal).
+
+   \textbf{Ref:} RUV-1
+    
+    \textbf{Prioridad:} MA
+\item \textbf{ Vencimiento de rentas:} El sistema deberá generar y mostrar  una notificación cuando se acerque la fecha de vencimiento de la renta del espectacular, al igual que cuando ya se haya vencido.
+
+   \textbf{Ref:}RUC-1
+    
+    \textbf{Prioridad:}A
+\item \textbf{ Consulta de anuncios contratados:} El sistema debe de mostrar al cliente en un mapa los espectaculares contratados a la empresa.
+
+   \textbf{Ref:}RUC-4
+    
+    \textbf{Prioridad:} M
+    
+\item \textbf{ Envío de correos:} El sistema permitirá el envió de correos electrónicos que contengan el reporte  del estado del espectacular.
+
+ \textbf{Ref:}RUA-1
+    
+    \textbf{Prioridad:} A
+\item \textbf{ Historial de clientes:} El sistema debe permitir consultar el historial de clientes que se han tenido, así como la posibilidad de filtrar que clientes se tuvieron en determinadas fechas.
+
+ \textbf{Ref:}RUGV-1
+ 
+\textbf{Prioridad:} M
+
+\item \textbf{ Respaldo:} La información almacenada en el sistema deberá respaldarse cada 24 horas.
+\item \textbf{CRUD Contratos:} El sistema deberá permitir la creación, modificación, consulta y eliminación de contratos. 
+
+ \textbf{Ref:}RUV-7
+ 
+\textbf{Prioridad:} A
+\item \textbf{ Información de cliente:} El sistema deberá proporcionar de manera consistente la información del cliente .
+\item \textbf{ Notificación de desperfectos en espectaculares:}El sistema deberá de ser capaz de recibir un informe de desperfecto en un espectacular y notificar al personal de instalación y mantenimiento para su reparación.
+
+ \textbf{Ref:}RUIM-3
+ 
+\textbf{Prioridad:} A
+\item \textbf{ Agregar cuenta:} El sistema deberá permitir al personal correspondiente agregar una cuenta de usuario para hacer uso del sistema.
+\item \textbf{Recuperar cuenta:} El sistema deberá ofrecer la opción de recuperar password para iniciar sesión de nuevo.
+\item \textbf{ Actualización de datos:} El sistema permitirá la actualización de los datos de los usuarios que interactuén con el sistema.
+
+\item \textbf{CRUD Clientes} El sistema permitira la creación, modificación y eliminación de clientes.
+
+ \textbf{Ref:}RUV-6
+ 
+\textbf{Prioridad:} A
+\item \textbf{CRUD Ventas} El sistema permitira la creacion, modificacion y eliminacion del personal de ventas.
+\item \textbf{CRUD Instalación y Mantenimiento:} El sistema permitirá la creación, modificación y eliminación del personal de instalación y mantenimiento.
+\item \textbf{ Geolocalizacion:} El sistema permitirá mostrar la información de un espectacular (Localización, información, estado).
+\item \textbf{CRUD Espectaculares:} El sistema permitirá la agregación, modificación y eliminación de espectaculares o su información para actualizar el mapa de espectaculares dentro de la empresa.
+%%%%%
+\item \textbf{ Estado de un espectacular:} El sistema permitirá visualizar el estaDo de un espectacular en el que se encuentre ocupado, en mantenimiento y cuando ya este disponible
+
+\end{enumerate}
+\subsection{Requerimientos no funcionales}
+\begin{itemize}
+\item La aplicación debe ser compatible con todas las versiones de Windows, desde Windows 7.
+\item Visualización en los navegadores más comunes como son Edge,Firefox,Chrome y Opera.
+\item Responsive, es decir, que sea visualizable en todos los dispositivos.
+\item Se utilizará el gestor de base de datos MySql.
+\item Las consultas que realice el sistema deberán responder de forma inmediata.
+\item La aplicación debe ser amigable con el usuario al momento de la interacción entre usuario y sistema.
+\end{itemize}
+\subsubsection{Plataforma}
+\subsubsection{Interacción con el usuario}
+\subsubsection{Procesos y reglas de negocio}
+\subsubsection{Información y datos}
+\subsubsection{Propiedades del software}
+
+%============================================================================
+%============================================================================
+%============================================================================
+%
+% Tenemos que pasar todo a la estructura de arriba
+%
+%============================================================================
+%============================================================================
+%============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\cdtInstrucciones{
+	Identifique los actores que estarán involucrados en los procesos relacionados con el sistema para esta iteración de desarrollo. Ponga énfasis en los procesos involucrados.
+}
+
+%\subsection{Organigrama de la Empresa}
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=.8\textwidth]{images/organigramaEm}
+%    \caption{Organigrama de la Mueblería Qetzal S. A. de C. V.}
+%    \label{fig:organigrama}
+%\end{figure}
+
+%---------------------------------------------------------
+\newpage
+
+
+%---------------------------------------------------------
+
+
+%\cdtInstrucciones{
+	%Identifique y describa los requerimientos funcionales del sistema señalando: id, nombre, descripción y %prioridad.
+%}
+
+
+%---------------------------------------------------------
+\section{Especificación de plataforma}	
+
+\cdtInstrucciones{
+	Coloque un diagrama y su descripción para aclarar el tipo de solución propuesta. \\
+	
+ En esta sección se debe aclarar:
+	
+\begin{description}
+	\item[Tipo de sistema:] Web, aplicación móvil, de escritorio, híbrida, etc.
+	\item[Software requerido:] Programas que se deberán instalar, desde el sistema operativo, compiladores, interpretes, servidores, etc.
+	\item[Hardware requerido:] CPU, núcleos, velocidad, memoria, disco duro, etc.
+	\item[servicios:] De conexión, seguridad, firewall, respaldo de energía, redundancia, uso de raids, etc.
+\end{description}
+}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=.6\textwidth]{images/arquitectura}}
+		\caption{Arquitectura del sistema.}
+		\label{fig:arquitectura}
+	\end{center}
+\end{figure}
+
+En la figura~\ref{fig:arquitectura} se describe la estructura del sistema, en ella se detalla ...
+
+
